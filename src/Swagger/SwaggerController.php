@@ -89,6 +89,6 @@ class SwaggerController
 
     protected function getSwaggerFileUrl($serverName): string
     {
-        return $this->swaggerConfig->getPrefixUrl() . '/' . $serverName . '.' . $this->swaggerConfig->getFormat();
+        return $this->swaggerConfig->getPrefixJsonUrl() . $this->swaggerConfig->getPrefixUrl() . '/' . $serverName . '.' . $this->swaggerConfig->getFormat();
     }
 }

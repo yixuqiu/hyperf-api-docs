@@ -17,6 +17,8 @@ class SwaggerConfig
 
     private string $prefix_url = '';
 
+    private string $prefix_json_url = '';
+
     private string $prefix_swagger_resources = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.5.0';
 
     private bool $validation_custom_attributes = false;
@@ -38,6 +40,11 @@ class SwaggerConfig
         // 私有属性和函数
         $jsonMapper->bIgnoreVisibility = true;
         $jsonMapper->map($data, $this);
+    }
+
+    public function getPrefixJsonUrl()
+    {
+        return $this->prefix_json_url;
     }
 
     public function setPrefixUrl(string $prefix_url): void
